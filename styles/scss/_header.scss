@@ -1,0 +1,111 @@
+.header{
+    @include lg-tablet{
+        padding: 45px 100px;
+    }
+    &__btn--margin{
+        margin-right: 30px;
+    }
+    @include lg-tablet{
+        border: none;
+    }
+    &__logo{
+        margin-right: 157px;
+    }
+}
+.nav{
+    display: none;
+    @include lg-tablet{
+        display: block;
+    }
+    &-relative.active{
+        position: relative;
+    }
+    &__link{
+        &:hover{
+            color: $btn-dark;
+        }
+        &:not(:last-child){
+            padding-right: 40px;
+        }
+        &.active{
+            
+        }
+    }
+    &.active{
+        display: block;
+    }
+    &-mobile.active{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        @include flex(column, flex-start, space-between, nowrap)
+    }
+}
+.btn-burger-wrapper{
+    @include flex(row, center, space-between, wrap);
+}
+.burger-menu{
+    width: 100%;
+    height: 2px;
+    background: $burger-bg;
+    &-wrapper{
+        @include flex(row, center, space-between, wrap);
+        position: relative;
+        height: 12px;
+        width: 18px;
+    }
+    &.active{
+        display: none;
+    }
+    &-wrapper{
+        position: relative;
+        &--desktop-hidden{
+            @include lg-tablet{
+                display: none;
+            }
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $burger-bg;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $burger-bg;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        &.active{
+            &:before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $burger-bg;
+                transform: rotate(45deg);
+                top: 5px;
+                right: 0;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $burger-bg;
+                transform: rotate(-45deg);
+                bottom: 5px;
+                left: 0;
+            }
+        }
+    }
+    
+}

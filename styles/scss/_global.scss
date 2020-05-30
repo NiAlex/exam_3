@@ -1,0 +1,61 @@
+.global{
+    @include flex(column, center, space-between, wrap);
+    &__subtitle{
+        padding: 20px 0 150px 0;
+    }
+    &__img{
+        width: 100%;
+    }
+    &__link{
+        margin: 20px;
+        @include md-tablet{
+            margin: 0;
+        }
+        width: 190px;
+        height: 60px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        &:not(:last-child){
+            margin-right: 45px;
+        }
+        transition: transform 0.5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+        &--netflix {
+            background-image: url(../../design/netflix.svg);
+            &:hover{
+                transform: scale(1.2);
+                background-image: url(../../design/netflix-dark.svg);
+            }
+        }
+        &--redit {
+            background-image: url(../../design/redit.svg);
+            &:hover{
+                transform: scale(1.2);
+                background-image: url(../../design/redit-dark.svg);
+            }
+        }
+        &--amazon {
+            background-image: url(../../design/amazon.svg);
+            &:hover{
+                transform: scale(1.2);
+                background-image: url(../../design/amazon-dark.svg);
+            }
+        }
+        &--discord {
+            background-image: url(../../design/discord.svg);
+            &:hover{
+                transform: scale(1.2);
+                background-image: url(../../design/discord-dark.svg);
+            }
+        }
+        &--spotify {
+            background-image: url(../../design/spotify.svg);
+            &:hover{
+                transform: scale(1.2);
+                background-image: url(../../design/spotify-dark.svg);
+            }
+        }
+    }
+}

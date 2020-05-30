@@ -1,0 +1,13 @@
+.subscribe{
+    background: #FFFFFF;
+    padding: 55px 70px;
+    &__info{
+        max-width: 372px;
+    }
+    &__subtitle{
+        margin-top: 20px;
+    }
+    &--bg{
+        background-image: linear-gradient( to top, #F8F8F8 0%, #F8F8F8 50%, #FFFFFF 50% ,#FFFFFF 100%);
+    }
+}

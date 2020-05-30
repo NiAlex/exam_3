@@ -1,0 +1,70 @@
+@mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin grid ($grid-template-columns, $grid-template-rows, $grid-gap) {
+    display: grid;
+    grid-template-columns: $grid-template-columns;
+    grid-template-rows: $grid-template-rows;
+    grid-gap: $grid-gap;
+}
+
+@mixin placeholder() {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @content;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        @content;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        @content;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+}
+
+// media
+
+// Using
+//.div {
+//   @include _1170 {
+//       @content;
+//   }
+//}
+//media_mixin.scss
+@mixin lg-desktop {
+    @media (min-width: 1170px){
+        @content;
+    }
+}
+@mixin md-desktop {
+    @media (min-width: 979px){
+        @content;
+    }
+}
+@mixin lg-tablet {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+@mixin md-tablet {
+    @media (min-width: 600px){
+        @content;
+    }
+}
+@mixin lg-phone {
+    @media (min-width: 480px){
+        @content;
+    }
+}
+@mixin md-phone {
+    @media (min-width: 350px){
+        @content;
+    }
+}
+

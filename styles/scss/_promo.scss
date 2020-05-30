@@ -1,0 +1,49 @@
+.promo{
+    padding: 20px 0;
+    @include md-desktop{
+        padding: 120px 0;
+    }
+    &--margin.active{
+        transition: margin 0.2s;
+        margin-top: 120px;
+    }
+    &__title--adaptive{
+        font-size: 30px;
+        line-height: 30px;
+        @include md-tablet{
+            font-size: 50px;
+            line-height: 70px;
+        }
+    }
+    &__info{
+        max-width: 500px;
+    }
+    &__subtitle{
+        &--padding-lg{
+            padding: 20px 0 50px 0;
+        }
+        &--padding-sm{
+            padding: 20px 0;
+        }
+    }
+    &__img{
+        width: 100%;
+    }
+    &__column--reverse{
+        @include flex(column-reverse, flex-end, space-between, nowrap);
+        @include md-desktop {
+            @include flex(row, center, space-between, wrap)
+        }
+    }
+    &__unorder-list{
+        li{
+            padding-left: 40px;
+            background-image: url(../../design/v-green.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.statistics{
+    padding: 60px 0;
+    box-shadow: 0px 100px 140px -77px #0D1025;
+    @include flex(row, center, space-around, wrap);
+    &__counter{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        color: $main-title-c;
+    }
+    &__info{
+        @include flex(column, flex-start, center, nowrap);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 70px;
+        margin: 20px;
+        @include md-tablet{
+            margin: 0;
+        }
+        &--users{
+            background-image: url(../../design/user.svg);
+        }
+        &--locations{
+            background-image: url(../../design/location.svg);
+        }
+        &--servers{
+            background-image: url(../../design/server.svg);
+        }
+        @include lg-desktop{
+            &--pseudo{
+                position: relative;
+            }
+            &--pseudo:before{
+                position: absolute;
+                content: "";
+                background-image: url(../../design/line.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 1px;
+                height: 125px;
+                margin-left: 200px;
+            }
+            &--pseudo:after{
+                position: absolute;
+                content: "";
+                background-image: url(../../design/line.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 1px;
+                height: 125px;
+                margin-left: -200px;
+            }
+        }
+    }
+}
